@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'infonegara';
+  title = 'Info Negara';
+
+  toAllCountry: boolean = false;
+
+  handleToAllCountry(){
+    if(!this.toAllCountry){
+      this.toAllCountry = true;
+    }
+    else{
+      this.toAllCountry = false;
+    }
+  }
 }

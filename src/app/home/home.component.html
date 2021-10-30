@@ -1,0 +1,57 @@
+<div class="container mt-2">
+    <h3><strong>Three Most Populated Countries</strong></h3>
+    <div class="row g-3 justify-content-center">
+        <div class="col-md-4 col-lg-4 col-sm-1" routerLink="/countrydetail/{{country.id}}" *ngFor="let country of sortPopulation.slice(0,3)">
+            <div class="card shadow-sm">
+                <img class="card-img-top" style="width: 100%; height: 150px;" src="../assets/{{ country.name }}.jpg">
+                <div class="card-body text-center">
+                    <p class="card-title" style="font-size:18px;">{{country.name}}</p>
+                    <p class="card-text">{{country.population | number}} <br>People</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <a routerLink="/countrydetail/{{country.id}}" class="btn btn-sm btn-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h3><strong>Three Largest Countries (Area)</strong></h3>
+    <div class="row g-3 justify-content-center">
+        <div class="col-md-4 col-lg-4 col-sm-1" routerLink="/countrydetail/{{country2.id}}" *ngFor="let country2 of sortArea.slice(0,3)">
+            <div class="card shadow-sm">
+                <img class="card-img-top" style="width: 100%; height: 150px;" src="../assets/{{ country2.name }}.jpg">
+                <div class="card-body text-center">
+                    <p class="card-title" style="font-size: 18px;">{{country2.name}}</p>
+                    <p class="card-text">{{country2.area | number}} km<sup>2</sup></p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <a routerLink="/countrydetail/{{country2.id}}" class="btn btn-sm btn-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5 mb-4">
+    <h3><strong>Three Largest Economics By GDP</strong></h3>
+    <div class="row g-3 justify-content-center">
+        <div class="col-md-4 col-lg-4 col-sm-1" routerLink="/countrydetail/{{country3.id}}" *ngFor="let country3 of sortGdp.slice(0,3)">
+            <div class="card shadow-sm">
+                <img class="card-img-top" style="width: 100%; height: 150px;" src="../assets/{{ country3.name }}.jpg">
+                <div class="card-body text-center">
+                    <p class="card-title" style="font-size: 18px;">{{country3.name}}</p>
+                    <p class="card-text">{{country3.gdp | number}} Billion USD</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <a routerLink="/countrydetail/{{country3.id}}" class="btn btn-sm btn-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

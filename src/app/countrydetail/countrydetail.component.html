@@ -1,0 +1,38 @@
+<div class="row justify-content-center mt-3" *ngIf="country">
+    
+    <h2>{{country.name | uppercase}}</h2>
+    <table class="table table-borderless" style="width: 50%;">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <img class="rounded" src="../assets/{{country.name}}.jpg" style="width: 100%;">
+                </td>
+            </tr>
+            <tr>
+                <td style="color: green; text-align: left;">Capital:</td>
+                <td style="text-align: left;"> {{country.capital}} </td>
+            </tr>
+            <tr>
+                <td style="color: green; text-align: left;">Area:</td>
+                <td style="text-align: left;"> {{country.area | number}} km<sup>2</sup> </td>
+            </tr>
+            <tr>
+                <td style="color: green; text-align: left;">Population:</td>
+                <td style="text-align: left;"> {{country.population | number}}</td>
+            </tr>
+            <tr>
+                <td style="color: green; text-align: left;">GDP:</td>
+                <td style="text-align: left;"> {{country.gdp | number}} Billion USD</td>
+            </tr>
+            <tr>
+                <td style="color: green; text-align: left;">Currency:</td>
+                <td style="text-align: left;"> {{country.currency}}</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">
+                    <a style="border-radius: 50px;" class="btn btn-sm btn-danger" (click)="goBack()">Go Back</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
